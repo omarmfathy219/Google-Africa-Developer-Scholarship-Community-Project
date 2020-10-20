@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<title> TOPSHOP| Modern 3D Virtual Dressing Room</title>    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+    <!--Core CSS -->
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/bulma.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Fonts -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <!-- Mobile Navbar-->
+    <!-- Mobile mode navbar -->
+    <nav class="navbar mobile-navbar is-hidden-desktop is-hidden-tablet" aria-label="main navigation">
+        <!-- Brand -->
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="assets/img/logo/top_black.png" alt="">
+            </a>
+
+            <!-- Sidebar mode toggler icon -->
+            <a id="sidebar-mode" class="navbar-item is-icon is-sidebar-toggler" href="javascript:void(0);">
+                <i data-feather="sidebar"></i>
+            </a>
+
+
+            
+        </div>
+
+        
+    </nav>
+    <!-- /Mobile mode navbar -->
+    <!-- Main Sidebar-->
+    <div class="main-sidebar">
+        <div class="sidebar-brand">
+            <a href="index.html"><img src="assets/img/logo/top_black.png" alt=""></a>
+        </div>
+        <div class="sidebar-inner">
+            <ul class="icon-menu">
+                <!-- Shop sidebar trigger -->
+                <li>
+                    <a href="javascript:void(0);" id="open-shop"><i data-feather="home"></i></a>
+                </li> <!-- Cart sidebar trigger -->
+                <li>
+                    <a href="javascript:void(0);" id="open-cart"><i data-feather="shopping-cart"></i><span id="cart-dot" class="cart-items gelatine is-hidden"></span></a>
+                </li> <!-- Search trigger -->
+                <li>
+                    <a href="javascript:void(0);" id="open-search"><i data-feather="search"></i></a>
+                    <a href="javascript:void(0);" id="close-search" class="is-hidden is-inactive"><i data-feather="x"></i></a>
+                </li> <!-- Shop Filters -->
+                <li class="is-hidden">
+                    <a id="open-filters"><i data-feather="filter"></i></a>
+                </li> <!-- Shop Wishlist -->
+                <li id="sidebar-wishlist-button" class="is-hidden">
+                    <a class="sidebar-whishlist modal-trigger" data-modal="add-to-wishlist-modal"><i data-feather="heart"></i></a>
+                </li>
+            </ul>
+
+            <!-- User account -->
+            <ul class="bottom-menu">
+                <li class="is-hidden-mobile">
+                    <div class="small-auth-loader">
+                        <div class="loader is-loading"></div>
+                    </div>
+                    <a id="login-link" href="authentication.html"><i data-feather="user"></i></a>
+                    <a id="logout-link" class="is-hidden"><i data-feather="log-out"></i></a>
+                </li>
+                <li id="fold-link" class="fold-link">
+                    <a><i data-feather="arrow-left"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- FAB -->
+    <div id="quickview-trigger" class="menu-fab is-hidden-mobile">
+        <a class="hamburger-btn" href="javascript:void(0);">
+            <span class="menu-toggle">
+                    <span class="icon-box-toggle"> 	
+                        <span class="rotate">
+                            <i class="icon-line-top"></i>
+                            <i class="icon-line-center"></i>
+                            <i class="icon-line-bottom"></i> 
+                        </span>
+            </span>
+            </span>
+        </a>
+    </div>
+       <!-- Categories Right quickview -->
+       <div class="category-quickview">
+        <div class="inner">
+            <ul class="category-menu">
+                <li>
+                    <a href="shirts.html">
+                        <span>Shirts</span>
+                        <img src="assets/img/icons/categories/shirts.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="dresses.html">
+                        <span>Dresses</span>
+                        <img src="assets/img/icons/categories/dresses.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="pants.html">
+                        <span>Pants</span>
+                        <img src="assets/img/icons/categories/pants.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="caps.html">
+                        <span>Caps</span>
+                        <img src="assets/img/icons/categories/caps.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="jackets.html">
+                        <span>Jackets</span>
+                        <img src="assets/img/icons/categories/jacket.svg">
+                    </a>
+                </li>
+            </ul>
+
+            <!--div class="all-categories is-hidden-mobile">
+                    <a href="products.html">Show all categories</a>
+                    <div class="centered-divider"></div>
+                </div-->
+        </div>
+    </div>
+    
+    <!-- Shop quickview -->
+    <div class="shop-quickview has-background-image" data-background="" data-demo-background="assets/img/bg/sidebar.jpeg">
+        <div class="inner">
+            <!-- Header -->
+            <div class="quickview-header">
+                <h2>TopShop</h2>
+                <span id="close-shop-sidebar"><i data-feather="x"></i></span>
+            </div>
+            <!-- Shop menu -->
+            <ul class="shop-menu">
+                <li>
+                    <a href="shop.html">
+                        <span>Shop</span>
+                        <i data-feather="grid"></i>
+                    </a>
+                </li>
+               
+                <li>
+                    <a href="account.html">
+                        <span>My Account</span>
+                        <i data-feather="user"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="orders.html">
+                        <span>My Orders</span>
+                        <i data-feather="credit-card"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="wishlist.html">
+                        <span>My Wishlists</span>
+                        <i data-feather="heart"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- Profile image -->
+            <ul class="user-profile">
+                <li>
+                    <a href="javascript:void(0);">
+                        <img id="quickview-avatar" src="http://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/altvatar.png" alt="">
+                        <span class="user">
+                                <span id="quickview-username">Guest</span>
+                        <span id="quickview-cart-count"><var>0</var> <small>Items in Cart</small></span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Cart quickview -->
+    <div class="cart-quickview">
+        <div class="inner">
+            <!-- Header -->
+            <div class="quickview-header">
+                <h2>Quick Cart</h2>
+                <span id="close-cart-sidebar"><i data-feather="x"></i></span>
+            </div>
+            <!-- Total and checkout -->
+            <div class="cart-action">
+                <span class="cart-total">
+                        0.00
+                    </span>
+                <a href="cart.html" class="button view-cart-button primary-button upper-button raised is-bold">
+                    <span>View Cart</span>
+                </a>
+                <a class="button update-cart-button upper-button is-bold is-hidden">
+                    <span>Update</span>
+                </a>
+            </div>
+            <!-- Cart quickview body -->
+            <div class="cart-body">
+
+                <!--Placeholder-->
+                <div class="empty-cart has-text-centered is-hidden">
+                    <img src="assets/img/icons/line/bag.svg" alt="">
+                    <h3>Your cart is empty</h3>
+                    <p>Start by adding products to it</p>
+                    <a href="shop.html" class="button big-button rounded">Continue Shopping</a>
+                    <small>You can create your account later</small>
+                </div>
+
+                <!--Loader-->
+                <div class="cart-loader is-active">
+                    <div class="loader is-loading"></div>
+                </div>
+
+                <ul class="shopping-cart-items">
+                    <!-- Item -->
+                    <li class="clearfix">
+                        <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/office5.jpg" alt="" />
+                        <span class="item-meta">
+                                <span class="item-name">Cosy Chair</span>
+                        <span class="item-price">
+                                    <var>88.00</var> x <span>1</span>
+                        </span>
+                        </span>
+                        <span class="quantity">
+                                <div data-trigger="spinner" class="return-spinner">
+                                    <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner"
+                                        data-rule="quantity" data-min="1" data-max="99">
+                                    <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                        <i data-feather="minus"></i>
+                                    </a>
+                                    <span class="spinner-value">1</span>
+                        <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                            <i data-feather="plus"></i>
+                        </a>
+            </div>
+            </span>
+
+            <span class="remove-item">
+                                <i data-feather="x" class="has-simple-popover" data-content="Remove from Cart"
+                                    data-placement="top"></i>
+                            </span>
+            </li>
+            <!-- Item -->
+            <li class="clearfix">
+                <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/red-seat.png" alt="" />
+                <span class="item-meta">
+                                <span class="item-name">Red Seat</span>
+                <span class="item-price">
+                                    <var>45.00</var> x <span>1</span>
+                </span>
+                </span>
+                <span class="quantity">
+                                <div data-trigger="spinner" class="return-spinner">
+                                    <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner"
+                                        data-rule="quantity" data-min="1" data-max="99">
+                                    <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                        <i data-feather="minus"></i>
+                                    </a>
+                                    <span class="spinner-value">1</span>
+                <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                    <i data-feather="plus"></i>
+                </a>
+        </div>
+        </span>
+
+        <span class="remove-item">
+                                <i data-feather="x" class="has-simple-popover" data-content="Remove from Cart"
+                                    data-placement="top"></i>
+                            </span>
+        </li>
+        <!-- Item -->
+        <li class="clearfix">
+            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/kids2.jpg" alt="" />
+            <span class="item-meta">
+                                <span class="item-name">Rabbit Lamp</span>
+            <span class="item-price">
+                                    <var>14.49</var> x <span>3</span>
+            </span>
+            </span>
+            <span class="quantity">
+                                <div data-trigger="spinner" class="return-spinner">
+                                    <input class="hidden-spinner" type="hidden" value="3" data-spin="spinner"
+                                        data-rule="quantity" data-min="1" data-max="99">
+                                    <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                        <i data-feather="minus"></i>
+                                    </a>
+                                    <span class="spinner-value">3</span>
+            <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                <i data-feather="plus"></i>
+            </a>
+    </div>
+    </span>
+
+    <span class="remove-item">
+                                <i data-feather="x" class="has-simple-popover" data-content="Remove from Cart"
+                                    data-placement="top"></i>
+                            </span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <!-- Main wrapper -->
+    <div class="shop-wrapper">
+
+        <!-- Search overlay -->
+        <div class="search-overlay"></div>
+
+        <!-- Search input -->
+        <div class="search-input-wrapper is-desktop is-hidden">
+            <div class="field">
+                <div class="control">
+                    <input id="nephos-search" type="text" name="search" placeholder="Search a Product">
+                    <span id="clear-search" role="button"><i data-feather="x"></i></span>
+                    <span class="bar"></span>
+                </div>
+                <span class="search-help">Type the name of the product you are looking for</span>
+            </div>
+        </div>
+        <!-- Main section -->
+        <div id="shop-authentication" class="section">
+            <!-- Container -->
+            <div class="container">
+
+                <!-- Authentication Layout -->
+                <div class="columns account-header is-auth">
+                    <div class="column main-column is-tablet-landscape-padded">
+                        <!-- Title -->
+                        <div class="auth-title">
+                            <h2 id="auth-main-title">LOGIN</h2>
+                        </div>
+                        <!--Toggler-->
+                        <div class="auth-toggler">
+                            <input type="checkbox">
+                            <div class="toggler-track">
+                                <div class="hexagon-wrap">
+                                    <div class="hexagon">
+                                        <i class="login-icon" data-feather="user"></i>
+                                        <i class="register-icon" data-feather="layers"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--New Login-->
+                        <div class="main-auth-wrapper">
+                            <!--Login wrapper-->
+                            <div class="login-form-wrapper">
+                                <!--Login form-->
+                                <div class="login-form">
+                                    <form id="login-form">
+                                        <!--Field-->
+                                        <div class="field has-flex-label has-validation">
+                                            <label>
+                                                <span>Email</span>
+                                                <span class="error">Please enter a valid email</span>
+                                            </label>
+                                            <div class="control is-bigger has-icon">
+                                                <input id="login-email" type="text" class="input">
+                                                <div class="form-icon">
+                                                    <i data-feather="mail"></i>
+                                                </div>
+                                                <div class="error-icon">
+                                                    <i data-feather="x"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Field-->
+                                        <div class="field has-flex-label has-validation">
+                                            <label>
+                                                <span>Password</span>
+                                                <span class="error">Minimum 8 characters</span>
+                                            </label>
+                                            <div class="control is-bigger has-icon">
+                                                <input id="login-password" type="password" class="input">
+                                                <div class="form-icon">
+                                                    <i data-feather="lock"></i>
+                                                </div>
+                                                <div class="error-icon">
+                                                    <i data-feather="x"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Field-->
+                                        <div class="flex-field">
+                                            <label class="special-toggle">
+                                                <input type="checkbox">
+                                                <span class="toggler">
+                                                        <span class="active">
+                                                            <i data-feather="check"></i>
+                                                        </span>
+                                                <span class="inactive">
+                                                            <i data-feather="circle"></i>
+                                                        </span>
+                                                </span>
+                                            </label>
+                                            <div class="muted-text">Remember me?</div>
+                                        </div>
+                                        <!--Submit-->
+                                        <div class="button-wrap">
+                                            <button id="login-submit" type="button" class="button primary-button upper-button raised is-fullwidth is-rounded">Login</button>
+                                        </div>
+                                        <!--Forgot-->
+                                        <div class="forgot-link has-text-centered">
+                                            <a>Forgot Password?</a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--Reset form-->
+                                <div class="reset-form is-hidden">
+                                    <form>
+                                        <p class="form-description">Enter your email to be able to reset your password. We'll send you an email with the instructions to follow.</p>
+                                        <!--Field-->
+                                        <div class="field">
+                                            <label>Email</label>
+                                            <div class="control is-bigger has-icon">
+                                                <input type="text" class="input">
+                                                <div class="form-icon">
+                                                    <i data-feather="mail"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Submit-->
+                                        <div class="button-wrap">
+                                            <button type="button" class="button primary-button upper-button raised is-fullwidth is-rounded">Reset Password</button>
+                                        </div>
+                                        <!--Back-->
+                                        <div class="back-link has-text-centered">
+                                            <a>Back To Login</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--Registration wrapper-->
+                            <div class="registration-form-wrapper is-hidden">
+                                <!--Registration form-->
+                                <div class="registration-form">
+                                    <form>
+                                        <!--Field-->
+                                        <div class="field has-flex-label has-validation">
+                                            <label>
+                                                <span>Email</span>
+                                                <span class="error">Please enter a valid email</span>
+                                            </label>
+                                            <div class="control is-bigger has-icon">
+                                                <input type="text" class="input">
+                                                <div class="form-icon">
+                                                    <i data-feather="mail"></i>
+                                                </div>
+                                                <div class="error-icon">
+                                                    <i data-feather="x"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Field-->
+                                        <div class="field">
+                                            <label>First Name</label>
+                                            <div class="control is-bigger has-icon">
+                                                <input type="text" class="input">
+                                                <div class="form-icon">
+                                                    <i data-feather="user"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Field-->
+                                        <div class="field">
+                                            <label>Last Name</label>
+                                            <div class="control is-bigger has-icon">
+                                                <input type="text" class="input">
+                                                <div class="form-icon">
+                                                    <i data-feather="user"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Field-->
+                                        <div class="field">
+                                            <label>Password</label>
+                                            <div class="control is-bigger has-icon">
+                                                <input type="password" class="input">
+                                                <div class="form-icon">
+                                                    <i data-feather="lock"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Field-->
+                                        <div class="flex-field">
+                                            <label class="special-toggle">
+                                                <input type="checkbox">
+                                                <span class="toggler">
+                                                        <span class="active">
+                                                            <i data-feather="check"></i>
+                                                        </span>
+                                                <span class="inactive">
+                                                            <i data-feather="circle"></i>
+                                                        </span>
+                                                </span>
+                                            </label>
+                                            <div class="muted-text">Subscribe to Newsletter?</div>
+                                        </div>
+                                        <!--Submit-->
+                                        <div class="button-wrap">
+                                            <button type="button" class="button primary-button upper-button raised is-fullwidth is-rounded">Register</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Authentication Layout -->
+            </div>
+            <!-- /Container -->
+        </div>
+        <!-- /Main section -->
+    </div>
+    <!-- /Main wrapper -->
+
+
+    <div class="login-accounts-panel">
+        <div class="panel-inner">
+            <div class="close-button">
+                <i data-feather="x"></i>
+            </div>
+            <div class="header">
+                <h3>Demo Accounts</h3>
+                <p>Use one of the following credentials to login to a demo TopShop account.</p>
+            </div>
+            <!--Block-->
+            <div class="login-block">
+                <img src="assets/img/team/ahmed.jpg" data-demo-src="assets/img/team/ahmed.jpg" alt="">
+                <div class="meta">
+                    <span>
+                            <label>Email: </label>
+                            <span class="fake-email">Ahmedosama@gmail.com</span>
+                    </span>
+                    <span>
+                            <label>Password: </label>
+                            <span class="fake-password">Ahmed123</span>
+                    </span>
+                </div>
+            </div>
+            
+            <!--Block-->
+            <div class="login-block">
+                <img src="assets/img/team/amora.png" data-demo-src="assets/img/team/amora.png" alt="">
+                <div class="meta">
+                    <span>
+                            <label>Email: </label>
+                            <span class="fake-email">Amoragoda@gmail.com</span>
+                    </span>
+                    <span>
+                            <label>Password: </label>
+                            <span class="fake-password">Amora123</span>
+                    </span>
+                </div>
+            </div>
+            <!--Block-->
+            <div class="login-block">
+                <img src="assets/img/team/basem.jpeg" data-demo-src="assets/img/team/basem.jpeg" alt="">
+                <div class="meta">
+                    <span>
+                            <label>Email: </label>
+                            <span class="fake-email">Basemghanem@gmail.com</span>
+                    </span>
+                    <span>
+                            <label>Password: </label>
+                            <span class="fake-password">Basem123</span>
+                    </span>
+                </div>
+            </div>
+            <!--Block-->
+            <div class="login-block">
+                <img src="assets/img/team/noura.png" data-demo-src="assets/img/team/noura.png" alt="">
+                <div class="meta">
+                    <span>
+                            <label>Email: </label>
+                            <span class="fake-email">Nouragomaa@gmail.com</span>
+                    </span>
+                    <span>
+                            <label>Password: </label>
+                            <span class="fake-password">Noura123</span>
+                    </span>
+                </div>
+            </div>
+            <div class="login-block">
+                <img src="assets/img/team/omar.jpg" data-demo-src="assets/img/team/omar.jpg" alt="">
+                <div class="meta">
+                    <span>
+                            <label>Email: </label>
+                            <span class="fake-email">OmarMFathy219@gmail.com</span>
+                    </span>
+                    <span>
+                            <label>Password: </label>
+                            <span class="fake-password">Omar123</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="login-accounts-trigger is-active">
+        <i data-feather="more-horizontal"></i>
+    </div> <!-- Concatenated plugins -->
+    <script src="assets/js/app.js"></script>
+
+    <!--Data-->
+    <script src="assets/js/_data-wishlist.js"></script>
+    <script src="assets/js/_data-addresses.js"></script>
+    <script src="assets/js/_data-orders.js"></script>
+
+    <!-- TopShop  js -->
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/topshop.js"></script>
+    <script src="assets/js/authentication.js"></script>
+    <script src="assets/js/cart.js"></script>
+
+    <!--Pages-->
+    <script src="assets/js/account.js"></script>
+    <script src="assets/js/wishlist.js"></script>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/orders.js"></script>
+    <script src="assets/js/order.js"></script>
+    <script src="assets/js/checkout.js"></script>
+    <script src="assets/js/search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<title> TOPSHOP| Modern 3D Virtual Dressing Room</title>    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+    <!--Core CSS -->
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/bulma.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Fonts -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <!-- Mobile Navbar-->
+    <!-- Mobile mode navbar -->
+    <nav class="navbar mobile-navbar is-hidden-desktop is-hidden-tablet" aria-label="main navigation">
+        <!-- Brand -->
+        <div class="navbar-brand">
+            <a class="navbar-item" href="home.html">
+                <img src="assets/img/logo/top_black.png" alt="">
+            </a>
+
+            <!-- Sidebar mode toggler icon -->
+            <a id="sidebar-mode" class="navbar-item is-icon is-sidebar-toggler" href="javascript:void(0);">
+                <i data-feather="sidebar"></i>
+            </a>
+
+
+            
+        </div>
+
+        
+    </nav>
+    <!-- /Mobile mode navbar -->
+    <!-- Main Sidebar-->
+    <div class="main-sidebar">
+        <div class="sidebar-brand">
+            <a href="home.html"><img src="assets/img/logo/top_black.png" alt=""></a>
+        </div>
+        <div class="sidebar-inner">
+            <ul class="icon-menu">
+                <!-- Shop sidebar trigger -->
+                <li>
+                    <a href="javascript:void(0);" id="open-shop"><i data-feather="home"></i></a>
+                </li> <!-- Cart sidebar trigger -->
+                <li>
+                    <a href="javascript:void(0);" id="open-cart"><i data-feather="shopping-cart"></i><span id="cart-dot" class="cart-items gelatine is-hidden"></span></a>
+                </li> <!-- Search trigger -->
+                <li>
+                    <a href="javascript:void(0);" id="open-search"><i data-feather="search"></i></a>
+                    <a href="javascript:void(0);" id="close-search" class="is-hidden is-inactive"><i data-feather="x"></i></a>
+                </li> <!-- Shop Filters -->
+                <li class="is-hidden">
+                    <a id="open-filters"><i data-feather="filter"></i></a>
+                </li> <!-- Shop Wishlist -->
+                <li id="sidebar-wishlist-button" class="is-hidden">
+                    <a class="sidebar-whishlist modal-trigger" data-modal="add-to-wishlist-modal"><i data-feather="heart"></i></a>
+                </li>
+            </ul>
+
+            <!-- User account -->
+            <ul class="bottom-menu">
+                <li class="is-hidden-mobile">
+                    <div class="small-auth-loader">
+                        <div class="loader is-loading"></div>
+                    </div>
+                    <a id="login-link" href="authentication.html"><i data-feather="user"></i></a>
+                    <a id="logout-link" class="is-hidden"><i data-feather="log-out"></i></a>
+                </li>
+                <li id="fold-link" class="fold-link">
+                    <a><i data-feather="arrow-left"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- FAB -->
+    <div id="quickview-trigger" class="menu-fab is-hidden-mobile">
+        <a class="hamburger-btn" href="javascript:void(0);">
+            <span class="menu-toggle">
+                    <span class="icon-box-toggle"> 	
+                        <span class="rotate">
+                            <i class="icon-line-top"></i>
+                            <i class="icon-line-center"></i>
+                            <i class="icon-line-bottom"></i> 
+                        </span>
+            </span>
+            </span>
+        </a>
+    </div>
+       <!-- Categories Right quickview -->
+       <div class="category-quickview">
+        <div class="inner">
+            <ul class="category-menu">
+                <li>
+                    <a href="shirts.html">
+                        <span>Shirts</span>
+                        <img src="assets/img/icons/categories/shirts.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="dresses.html">
+                        <span>Dresses</span>
+                        <img src="assets/img/icons/categories/dresses.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="pants.html">
+                        <span>Pants</span>
+                        <img src="assets/img/icons/categories/pants.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="caps.html">
+                        <span>Caps</span>
+                        <img src="assets/img/icons/categories/caps.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="jackets.html">
+                        <span>Jackets</span>
+                        <img src="assets/img/icons/categories/jacket.svg">
+                    </a>
+                </li>
+            </ul>
+
+            <!--div class="all-categories is-hidden-mobile">
+                    <a href="products.html">Show all categories</a>
+                    <div class="centered-divider"></div>
+                </div-->
+        </div>
+    </div>
+    
+    <!-- Shop quickview -->
+    <div class="shop-quickview has-background-image" data-background="" data-demo-background="assets/img/bg/sidebar.jpeg">
+        <div class="inner">
+            <!-- Header -->
+            <div class="quickview-header">
+                <h2>TopShop</h2>
+                <span id="close-shop-sidebar"><i data-feather="x"></i></span>
+            </div>
+            <!-- Shop menu -->
+            <ul class="shop-menu">
+                <li>
+                    <a href="shop.html">
+                        <span>Shop</span>
+                        <i data-feather="grid"></i>
+                    </a>
+                </li>
+               
+                <li>
+                    <a href="account.html">
+                        <span>My Account</span>
+                        <i data-feather="user"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="orders.html">
+                        <span>My Orders</span>
+                        <i data-feather="credit-card"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="wishlist.html">
+                        <span>My Wishlists</span>
+                        <i data-feather="heart"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- Profile image -->
+            <ul class="user-profile">
+                <li>
+                    <a href="javascript:void(0);">
+                        <img id="quickview-avatar" src="http://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/altvatar.png" alt="">
+                        <span class="user">
+                                <span id="quickview-username">Guest</span>
+                        <span id="quickview-cart-count"><var>0</var> <small>Items in Cart</small></span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Cart quickview -->
+    <div class="cart-quickview">
+        <div class="inner">
+            <!-- Header -->
+            <div class="quickview-header">
+                <h2>Quick Cart</h2>
+                <span id="close-cart-sidebar"><i data-feather="x"></i></span>
+            </div>
+            <!-- Total and checkout -->
+            <div class="cart-action">
+                <span class="cart-total">
+                        0.00
+                    </span>
+                <a href="cart.html" class="button view-cart-button primary-button upper-button raised is-bold">
+                    <span>View Cart</span>
+                </a>
+                <a class="button update-cart-button upper-button is-bold is-hidden">
+                    <span>Update</span>
+                </a>
+            </div>
+            <!-- Cart quickview body -->
+            <div class="cart-body">
+
+                <!--Placeholder-->
+                <div class="empty-cart has-text-centered is-hidden">
+                    <img src="assets/img/icons/line/bag.svg" alt="">
+                    <h3>Your cart is empty</h3>
+                    <p>Start by adding products to it</p>
+                    <a href="shop.html" class="button big-button rounded">Continue Shopping</a>
+                    <small>You can create your account later</small>
+                </div>
+
+                <!--Loader-->
+                <div class="cart-loader is-active">
+                    <div class="loader is-loading"></div>
+                </div>
+
+                <ul class="shopping-cart-items">
+                    <!-- Item -->
+                    <li class="clearfix">
+                        <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/office5.jpg" alt="" />
+                        <span class="item-meta">
+                                <span class="item-name">Cosy Chair</span>
+                        <span class="item-price">
+                                    <var>88.00</var> x <span>1</span>
+                        </span>
+                        </span>
+                        <span class="quantity">
+                                <div data-trigger="spinner" class="return-spinner">
+                                    <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner"
+                                        data-rule="quantity" data-min="1" data-max="99">
+                                    <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                        <i data-feather="minus"></i>
+                                    </a>
+                                    <span class="spinner-value">1</span>
+                        <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                            <i data-feather="plus"></i>
+                        </a>
+            </div>
+            </span>
+
+            <span class="remove-item">
+                                <i data-feather="x" class="has-simple-popover" data-content="Remove from Cart"
+                                    data-placement="top"></i>
+                            </span>
+            </li>
+            <!-- Item -->
+            <li class="clearfix">
+                <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/red-seat.png" alt="" />
+                <span class="item-meta">
+                                <span class="item-name">Red Seat</span>
+                <span class="item-price">
+                                    <var>45.00</var> x <span>1</span>
+                </span>
+                </span>
+                <span class="quantity">
+                                <div data-trigger="spinner" class="return-spinner">
+                                    <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner"
+                                        data-rule="quantity" data-min="1" data-max="99">
+                                    <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                        <i data-feather="minus"></i>
+                                    </a>
+                                    <span class="spinner-value">1</span>
+                <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                    <i data-feather="plus"></i>
+                </a>
+        </div>
+        </span>
+
+        <span class="remove-item">
+                                <i data-feather="x" class="has-simple-popover" data-content="Remove from Cart"
+                                    data-placement="top"></i>
+                            </span>
+        </li>
+        <!-- Item -->
+        <li class="clearfix">
+            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/kids2.jpg" alt="" />
+            <span class="item-meta">
+                                <span class="item-name">Rabbit Lamp</span>
+            <span class="item-price">
+                                    <var>14.49</var> x <span>3</span>
+            </span>
+            </span>
+            <span class="quantity">
+                                <div data-trigger="spinner" class="return-spinner">
+                                    <input class="hidden-spinner" type="hidden" value="3" data-spin="spinner"
+                                        data-rule="quantity" data-min="1" data-max="99">
+                                    <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                        <i data-feather="minus"></i>
+                                    </a>
+                                    <span class="spinner-value">3</span>
+            <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                <i data-feather="plus"></i>
+            </a>
+    </div>
+    </span>
+
+    <span class="remove-item">
+                                <i data-feather="x" class="has-simple-popover" data-content="Remove from Cart"
+                                    data-placement="top"></i>
+                            </span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <!-- Filters quickview -->
+    <div class="filters-quickview">
+        <div class="inner">
+            <!-- Header -->
+            <div class="quickview-header">
+                <h2>Filters</h2>
+                <span id="close-filters-sidebar"><i data-feather="x"></i></span>
+            </div>
+
+            <!-- Filters body -->
+            <div class="filters-body">
+                <!-- Categories checkboxes -->
+                <div class="filter-block">
+                    <h3 class="filter-title has-padding">Categories</h3>
+                    <div class="columns is-checkboxes is-gapless is-multiline">
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="house" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        House
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="office" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Office
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="kids" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Kids
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="kitchen" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Kitchen
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="accessories" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Misc
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Categories -->
+
+                <!-- Types -->
+                <div class="filter-block">
+                    <h3 class="filter-title has-padding">Types</h3>
+                    <div class="columns is-checkboxes is-gapless is-multiline">
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="chairs" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Chairs
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="couches" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Couches
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="tables" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Tables
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="beds" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Beds
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="lights" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Lights
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="devices" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Devices
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Types -->
+
+                <!-- Price range filter -->
+                <div class="filter-block">
+                    <h3 class="filter-title">Price</h3>
+                    <div class="price-range-wrapper">
+                        <div class="price-limit">0</div>
+                        <div class="range-slider">
+                            <input class="input-range" type="range" value="1500" min="1" max="1500">
+                            <div class="slider-output">
+                                <small>Show between</small><span class="range-value"></span>
+                            </div>
+                        </div>
+                        <div class="price-limit">1500</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Main wrapper -->
+    <div class="shop-wrapper">
+
+        <!-- Search overlay -->
+        <div class="search-overlay"></div>
+
+        <!-- Search input -->
+        <div class="search-input-wrapper is-desktop is-hidden">
+            <div class="field">
+                <div class="control">
+                    <input id="nephos-search" type="text" name="search" placeholder="Search a Product">
+                    <span id="clear-search" role="button"><i data-feather="x"></i></span>
+                    <span class="bar"></span>
+                </div>
+                <span class="search-help">Type the name of the product you are looking for</span>
+            </div>
+        </div>
+        <!-- Main section -->
+        <div id="shop-grid" class="section">
+            <!-- Container -->
+            <div class="container">
+
+                <!-- House products -->
+                <div class="columns category-header">
+                    <div class="column main-column is-tablet-landscape-padded">
+                        <!-- Title -->
+                        <div class="category-title is-product-category">
+                            <h2>Shirts</h2>
+                            <div class="category-icon is-hidden-mobile">
+                               <img src="assets/img/icons/categories/shirts.svg">
+                                </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="listing-controls">
+                            <div class="layout-controls">
+                            </div>
+                            <!-- Sort -->
+                            <div class="sort-box">
+                                <div class="sort-box-select">
+                                    <select data-placeholder="Default order" class="chosen-select-no-single">
+                                        <option>Default Sort</option>
+                                        <option>Best Sellers</option>
+                                        <option>Highest Rated</option>
+                                        <option>Best Deals</option>
+                                        <option>Newest Products</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Controls -->
+
+                        <!-- Product grid -->
+                        <div class="columns is-product-grid is-multiline">
+                            <!-- Product -->
+                            <div class="column is-4">
+                                <div class="flat-card product-container" data-product-id="1" data-product-category="House">
+                                    <!-- Product zoomable image -->
+                                    <div class="image">
+                                        <img src="assets/img/products/shirts/1.png" data-demo-src="assets/img/products/red-seat.png" alt="">
+                                    </div>
+                                    <!-- Product meta -->
+                                    <div class="product-info has-text-centered">
+                                        <a class="product-details-link" href="product.html">
+                                            <h3 class="product-name">Hero T-Shirt For Men, Black</h3>
+                                        </a>
+                                        <p class="product-description"></p>
+                                        <p class="product-price">
+                                            <span>45.00</span>
+                                        </p>
+                                    </div>
+                                    <!-- Product actions -->
+                                    <div class="actions">
+                                        <div class="add">
+                                            <i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i>
+                                        </div>
+                                        <div class="like modal-trigger" data-modal="add-to-wishlist-modal">
+                                            <i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product -->
+                            <div class="column is-4">
+                                <div class="flat-card product-container" data-product-id="3" data-product-category="House">
+                                    <div class="image">
+                                        <img src="assets/img/products/shirts/3.png" data-demo-src="assets/img/products/modern-table.png" alt="">
+                                    </div>
+                                    <div class="product-info has-text-centered">
+                                        <a class="product-details-link" href="product.html">
+                                            <h3 class="product-name featured">Cotton V-Neck T-Shirt for Men - Maroon</h3>
+                                        </a>
+                                        <p class="product-description"></p>
+                                        <p class="product-price">
+                                            <span>350.49</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="actions">
+                                        <div class="add">
+                                            <i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i>
+                                        </div>
+                                        <div class="like modal-trigger" data-modal="add-to-wishlist-modal">
+                                            <i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product -->
+                            <div class="column is-4">
+                                <div class="flat-card product-container" data-product-id="4" data-product-category="House">
+                                    <div class="image">
+                                        <img src="assets/img/products/shirts/4.png" data-demo-src="assets/img/products/blue-seat.png" alt="">
+                                    </div>
+                                    <div class="product-info has-text-centered">
+                                        <a class="product-details-link" href="product.html">
+                                            <h3 class="product-name">Mobaco Ribbed Short SleevesPolo Shirt</h3>
+                                        </a>
+                                        <p class="product-description"></p>
+                                        <p class="product-price">
+                                            <span>35.00</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="actions">
+                                        <div class="add">
+                                            <i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i>
+                                        </div>
+                                        <div class="like modal-trigger" data-modal="add-to-wishlist-modal">
+                                            <i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product -->
+                            <div class="column">
+                                <div class="flat-card product-container" data-product-id="5" data-product-category="House">
+                                    <div class="image">
+                                        <img src="assets/img/products/shirts/5.png" data-demo-src="assets/img/products/modern-bed.jpg" alt="">
+                                    </div>
+                                    <div class="product-info has-text-centered">
+                                        <a class="product-details-link" href="product.html">
+                                            <h3 class="product-name featured-md">White Mixed Round Neck T-Shirt For Men</h3>
+                                        </a>
+                                        <p class="product-description"></p>
+                                        <p class="product-price is-on-sale">
+                                            <span>120.99</span>
+                                            <span class="sale-price">299.99</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="actions">
+                                        <div class="add">
+                                            <i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i>
+                                        </div>
+                                        <div class="like modal-trigger" data-modal="add-to-wishlist-modal">
+                                            <i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i>
+                                        </div>
+                                    </div>
+
+                                    <!-- Sale indicator -->
+                                    <div class="on-sale">
+                                        <i data-feather="dollar-sign" class="has-simple-popover" data-content="This product is on sale" data-placement="top"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product -->
+                            <div class="column is-4">
+                                <div class="flat-card product-container" data-product-id="6" data-product-category="House">
+                                    <div class="image">
+                                        <img src="assets/img/products/shirts/6.png" data-demo-src="assets/img/products/dark-seat.jpg" alt="">
+                                    </div>
+                                    <div class="product-info has-text-centered">
+                                        <a class="product-details-link" href="product.html">
+                                            <h3 class="product-name">Round-Neck Short Sleeve Solid for Men - Black</h3>
+                                        </a>
+                                        <p class="product-description"></p>
+                                        <p class="product-price is-on-sale">
+                                            <span>50.25</span>
+                                            <span class="sale-price">79.25</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="actions">
+                                        <div class="add">
+                                            <i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i>
+                                        </div>
+                                        <div class="like modal-trigger" data-modal="add-to-wishlist-modal">
+                                            <i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="on-sale">
+                                        <i data-feather="dollar-sign" class="has-simple-popover" data-content="This product is on sale" data-placement="top"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product -->
+                            <div class="column is-4">
+                                <div class="flat-card product-container" data-product-id="7" data-product-category="House">
+                                    <div class="image">
+                                        <img src="assets/img/products/shirts/7.png" data-demo-src="assets/img/products/house1.png" alt="">
+                                    </div>
+                                    <div class="product-info has-text-centered">
+                                        <a class="product-details-link" href="product.html">
+                                            <h3 class="product-name featured-md">Hero White Mixed V Neck T-Shirt For Men</h3>
+                                        </a>
+                                        <p class="product-description"></p>
+                                        <p class="product-price">
+                                            <span>430.00</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="actions">
+                                        <div class="add">
+                                            <i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i>
+                                        </div>
+                                        <div class="like modal-trigger" data-modal="add-to-wishlist-modal">
+                                            <i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product -->
+                            <div class="column is-4">
+                                <div class="flat-card product-container" data-product-id="8" data-product-category="House">
+                                    <div class="image">
+                                        <img src="assets/img/products/shirts/8.png" data-demo-src="assets/img/products/house2.jpg" alt="">
+                                    </div>
+                                    <div class="product-info has-text-centered">
+                                        <a class="product-details-link" href="product.html">
+                                            <h3 class="product-name featured-md">Kady Nightshirt For Women - Watermelon</h3>
+                                        </a>
+                                        <p class="product-description"></p>
+                                        <p class="product-price">
+                                            <span>240.00</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="actions">
+                                        <div class="add">
+                                            <i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i>
+                                        </div>
+                                        <div class="like modal-trigger" data-modal="add-to-wishlist-modal">
+                                            <i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Product grid -->
+                    </div>
+                </div>
+                <!-- /House products -->
+            </div>
+            <!-- /Container -->
+        </div>
+        <!-- /Main section -->
+    </div>
+    <!-- /Main wrapper -->
+
+    <!-- Add to Wishlist Modal -->
+    <div id="add-to-wishlist-modal" class="modal add-to-wishlist-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <div class="box-header">
+                    
+                    <span>ADD TO WISHLIST</span>
+                    <div class="modal-delete"><i data-feather="x"></i></div>
+                </div>
+                <div class="box-body">
+                    <div class="inner-content">
+                        <div id="existing-product-message" class="message is-link has-close-icon is-hidden">
+                            <div class="message-body">
+                                <a class="close-icon">
+                                    <i data-feather="x"></i>
+                                </a>
+                                This product already exists in the selected wishlist. Please try another one.
+                            </div>
+                        </div>
+                        <div id="wishlist-modal-list-placeholder" class="modal-placeholder is-hidden">
+                            <div class="placeholder-content">
+                                <img src="assets/img/illustrations/bed.svg" alt="">
+                                <h3>No Wishlists</h3>
+                                <p>You currently don't have any wishlist saved. Start by creating one.</p>
+                                <div class="button-wrap">
+                                    <a href="wishlist.html" class="button big-button primary-button rounded raised modal-delete">Add
+                                        Wishlist</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="wishlist-modal-list" class="wishlist-modal-list">
+                            <p>Add a new sub list to classify your wishlist items. You can then manage them and find them
+                                more
+                                easily.</p>
+                            <ul>
+                                <li class="list-item is-active">
+                                    <div class="meta">
+                                        <span class="name">Title</span>
+                                        <span class="count"><var>0</var> Items</span>
+                                    </div>
+                                    <div class="selected-indicator">
+                                        <i data-feather="check"></i>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <div class="meta">
+                                        <span class="name">Title</span>
+                                        <span class="count"><var>0</var> Items</span>
+                                    </div>
+                                    <div class="selected-indicator">
+                                        <i data-feather="check"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="button-wrap">
+                                <button type="submit" class="button add-to-wishlist-action is-fullwidth feather-button is-bold primary-button raised">
+                                    Add To Wishlist
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Concatenated plugins -->
+    <script src="assets/js/app.js"></script>
+
+    <!--Data-->
+    <script src="assets/js/_data-wishlist.js"></script>
+    <script src="assets/js/_data-addresses.js"></script>
+    <script src="assets/js/_data-orders.js"></script>
+
+    <!-- TopShop  js -->
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/topshop.js"></script>
+    <script src="assets/js/authentication.js"></script>
+    <script src="assets/js/cart.js"></script>
+
+    <!--Pages-->
+    <script src="assets/js/account.js"></script>
+    <script src="assets/js/wishlist.js"></script>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/orders.js"></script>
+    <script src="assets/js/order.js"></script>
+    <script src="assets/js/checkout.js"></script>
+    <script src="assets/js/search.js"></script>
+</body>
+
+</html>

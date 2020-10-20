@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<title> TOPSHOP| Modern 3D Virtual Dressing Room</title>    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+    <!--Core CSS -->
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/bulma.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Fonts -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <!-- Mobile Navbar-->
+    <!-- Mobile mode navbar -->
+    <nav class="navbar mobile-navbar is-hidden-desktop is-hidden-tablet" aria-label="main navigation">
+        <!-- Brand -->
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="assets/img/logo/top_black.png" alt="">
+            </a>
+
+            <!-- Sidebar mode toggler icon -->
+            <a id="sidebar-mode" class="navbar-item is-icon is-sidebar-toggler" href="javascript:void(0);">
+                <i data-feather="sidebar"></i>
+            </a>
+
+
+            
+        </div>
+
+        
+    </nav>
+    <!-- /Mobile mode navbar -->
+    <!-- Main Sidebar-->
+    <div class="main-sidebar">
+        <div class="sidebar-brand">
+            <a href="index.html"><img src="assets/img/logo/top_black.png" alt=""></a>
+        </div>
+        <div class="sidebar-inner">
+            <ul class="icon-menu">
+                <!-- Shop sidebar trigger -->
+                <li>
+                    <a href="javascript:void(0);" id="open-shop"><i data-feather="home"></i></a>
+                </li> <!-- Cart sidebar trigger -->
+                <li>
+                    <a href="javascript:void(0);" id="open-cart"><i data-feather="shopping-cart"></i><span id="cart-dot" class="cart-items gelatine is-hidden"></span></a>
+                </li> <!-- Search trigger -->
+                <li>
+                    <a href="javascript:void(0);" id="open-search"><i data-feather="search"></i></a>
+                    <a href="javascript:void(0);" id="close-search" class="is-hidden is-inactive"><i data-feather="x"></i></a>
+                </li> <!-- Shop Filters -->
+                <li class="is-hidden">
+                    <a id="open-filters"><i data-feather="filter"></i></a>
+                </li> <!-- Shop Wishlist -->
+                <li id="sidebar-wishlist-button" class="is-hidden">
+                    <a class="sidebar-whishlist modal-trigger" data-modal="add-to-wishlist-modal"><i data-feather="heart"></i></a>
+                </li>
+            </ul>
+
+            <!-- User account -->
+            <ul class="bottom-menu">
+                <li class="is-hidden-mobile">
+                    <div class="small-auth-loader">
+                        <div class="loader is-loading"></div>
+                    </div>
+                    <a id="login-link" href="authentication.html"><i data-feather="user"></i></a>
+                    <a id="logout-link" class="is-hidden"><i data-feather="log-out"></i></a>
+                </li>
+                <li id="fold-link" class="fold-link">
+                    <a><i data-feather="arrow-left"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- FAB -->
+    <div id="quickview-trigger" class="menu-fab is-hidden-mobile">
+        <a class="hamburger-btn" href="javascript:void(0);">
+            <span class="menu-toggle">
+                    <span class="icon-box-toggle"> 	
+                        <span class="rotate">
+                            <i class="icon-line-top"></i>
+                            <i class="icon-line-center"></i>
+                            <i class="icon-line-bottom"></i> 
+                        </span>
+            </span>
+            </span>
+        </a>
+    </div>
+       <!-- Categories Right quickview -->
+       <div class="category-quickview">
+        <div class="inner">
+            <ul class="category-menu">
+                <li>
+                    <a href="shirts.html">
+                        <span>Shirts</span>
+                        <img src="assets/img/icons/categories/shirts.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="dresses.html">
+                        <span>Dresses</span>
+                        <img src="assets/img/icons/categories/dresses.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="pants.html">
+                        <span>Pants</span>
+                        <img src="assets/img/icons/categories/pants.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="caps.html">
+                        <span>Caps</span>
+                        <img src="assets/img/icons/categories/caps.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="jackets.html">
+                        <span>Jackets</span>
+                        <img src="assets/img/icons/categories/jacket.svg">
+                    </a>
+                </li>
+            </ul>
+
+            <!--div class="all-categories is-hidden-mobile">
+                    <a href="products.html">Show all categories</a>
+                    <div class="centered-divider"></div>
+                </div-->
+        </div>
+    </div>
+
+    <!-- Shop quickview -->
+    <div class="shop-quickview has-background-image" data-background="" data-demo-background="assets/img/bg/sidebar.jpeg">
+        <div class="inner">
+            <!-- Header -->
+            <div class="quickview-header">
+                <h2>TopShop</h2>
+                <span id="close-shop-sidebar"><i data-feather="x"></i></span>
+            </div>
+            <!-- Shop menu -->
+            <ul class="shop-menu">
+                <li>
+                    <a href="shop.html">
+                        <span>Shop</span>
+                        <i data-feather="grid"></i>
+                    </a>
+                </li>
+               
+                <li>
+                    <a href="account.html">
+                        <span>My Account</span>
+                        <i data-feather="user"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="orders.html">
+                        <span>My Orders</span>
+                        <i data-feather="credit-card"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="wishlist.html">
+                        <span>My Wishlists</span>
+                        <i data-feather="heart"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- Profile image -->
+            <ul class="user-profile">
+          
+
+    <!-- Shop quickview -->
+    <div class="shop-quickview has-background-image" data-background="" data-demo-background="assets/img/bg/sidebar.jpeg">
+        <div class="inner">
+            <!-- Header -->
+            <div class="quickview-header">
+                <h2>TopShop</h2>
+                <span id="close-shop-sidebar"><i data-feather="x"></i></span>
+            </div>
+            <!-- Shop menu -->
+            <ul class="shop-menu">
+                <li>
+                    <a href="shop.html">
+                        <span>Shop</span>
+                        <i data-feather="grid"></i>
+                    </a>
+                </li>
+               
+                <li>
+                    <a href="account.html">
+                        <span>My Account</span>
+                        <i data-feather="user"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="orders.html">
+                        <span>My Orders</span>
+                        <i data-feather="credit-card"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="wishlist.html">
+                        <span>My Wishlists</span>
+                        <i data-feather="heart"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- Profile image -->
+            <ul class="user-profile">
+                <li>
+                    <a href="javascript:void(0);">
+                        <img id="quickview-avatar" src="http://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/altvatar.png" alt="">
+                        <span class="user">
+                                <span id="quickview-username">Guest</span>
+                        <span id="quickview-cart-count"><var>0</var> <small>Items in Cart</small></span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Cart quickview -->
+    <div class="cart-quickview">
+        <div class="inner">
+            <!-- Header -->
+            <div class="quickview-header">
+                <h2>Quick Cart</h2>
+                <span id="close-cart-sidebar"><i data-feather="x"></i></span>
+            </div>
+            <!-- Total and checkout -->
+            <div class="cart-action">
+                <span class="cart-total">
+                        0.00
+                    </span>
+                <a href="cart.html" class="button view-cart-button primary-button upper-button raised is-bold">
+                    <span>View Cart</span>
+                </a>
+                <a class="button update-cart-button upper-button is-bold is-hidden">
+                    <span>Update</span>
+                </a>
+            </div>
+            <!-- Cart quickview body -->
+            <div class="cart-body">
+
+                <!--Placeholder-->
+                <div class="empty-cart has-text-centered is-hidden">
+                    <img src="assets/img/icons/line/bag.svg" alt="">
+                    <h3>Your cart is empty</h3>
+                    <p>Start by adding products to it</p>
+                    <a href="shop.html" class="button big-button rounded">Continue Shopping</a>
+                    <small>You can create your account later</small>
+                </div>
+
+                <!--Loader-->
+                <div class="cart-loader is-active">
+                    <div class="loader is-loading"></div>
+                </div>
+
+                <ul class="shopping-cart-items">
+                    <!-- Item -->
+                    <li class="clearfix">
+                        <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/office5.jpg" alt="" />
+                        <span class="item-meta">
+                                <span class="item-name">Cosy Chair</span>
+                        <span class="item-price">
+                                    <var>88.00</var> x <span>1</span>
+                        </span>
+                        </span>
+                        <span class="quantity">
+                                <div data-trigger="spinner" class="return-spinner">
+                                    <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner"
+                                        data-rule="quantity" data-min="1" data-max="99">
+                                    <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                        <i data-feather="minus"></i>
+                                    </a>
+                                    <span class="spinner-value">1</span>
+                        <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                            <i data-feather="plus"></i>
+                        </a>
+            </div>
+            </span>
+
+            <span class="remove-item">
+                                <i data-feather="x" class="has-simple-popover" data-content="Remove from Cart"
+                                    data-placement="top"></i>
+                            </span>
+            </li>
+            <!-- Item -->
+            <li class="clearfix">
+                <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/red-seat.png" alt="" />
+                <span class="item-meta">
+                                <span class="item-name">Red Seat</span>
+                <span class="item-price">
+                                    <var>45.00</var> x <span>1</span>
+                </span>
+                </span>
+                <span class="quantity">
+                                <div data-trigger="spinner" class="return-spinner">
+                                    <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner"
+                                        data-rule="quantity" data-min="1" data-max="99">
+                                    <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                        <i data-feather="minus"></i>
+                                    </a>
+                                    <span class="spinner-value">1</span>
+                <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                    <i data-feather="plus"></i>
+                </a>
+        </div>
+        </span>
+
+        <span class="remove-item">
+                                <i data-feather="x" class="has-simple-popover" data-content="Remove from Cart"
+                                    data-placement="top"></i>
+                            </span>
+        </li>
+        <!-- Item -->
+        <li class="clearfix">
+            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/kids2.jpg" alt="" />
+            <span class="item-meta">
+                                <span class="item-name">Rabbit Lamp</span>
+            <span class="item-price">
+                                    <var>14.49</var> x <span>3</span>
+            </span>
+            </span>
+            <span class="quantity">
+                                <div data-trigger="spinner" class="return-spinner">
+                                    <input class="hidden-spinner" type="hidden" value="3" data-spin="spinner"
+                                        data-rule="quantity" data-min="1" data-max="99">
+                                    <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                        <i data-feather="minus"></i>
+                                    </a>
+                                    <span class="spinner-value">3</span>
+            <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                <i data-feather="plus"></i>
+            </a>
+    </div>
+    </span>
+
+    <span class="remove-item">
+                                <i data-feather="x" class="has-simple-popover" data-content="Remove from Cart"
+                                    data-placement="top"></i>
+                            </span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <!-- Filters quickview -->
+    <div class="filters-quickview">
+        <div class="inner">
+            <!-- Header -->
+            <div class="quickview-header">
+                <h2>Filters</h2>
+                <span id="close-filters-sidebar"><i data-feather="x"></i></span>
+            </div>
+
+            <!-- Filters body -->
+            <div class="filters-body">
+
+
+                <!-- Categories checkboxes -->
+                <div class="filter-block">
+                    <h3 class="filter-title has-padding">Categories</h3>
+                    <div class="columns is-checkboxes is-gapless is-multiline">
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="house" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        House
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="office" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Office
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="kids" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Kids
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="kitchen" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Kitchen
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="accessories" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Misc
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Categories -->
+
+                <!-- Types -->
+                <div class="filter-block">
+                    <h3 class="filter-title has-padding">Types</h3>
+                    <div class="columns is-checkboxes is-gapless is-multiline">
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="chairs" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Chairs
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="couches" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Couches
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="tables" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Tables
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="beds" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Beds
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="lights" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Lights
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox-wrap is-small">
+                                        <input id="devices" type="checkbox" class="d-checkbox" checked>
+                                        <span></span>
+                                        Devices
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Types -->
+
+                <!-- Price range filter -->
+                <div class="filter-block">
+                    <h3 class="filter-title">Price</h3>
+                    <div class="price-range-wrapper">
+                        <div class="price-limit">0</div>
+                        <div class="range-slider">
+                            <input class="input-range" type="range" value="1500" min="1" max="1500">
+                            <div class="slider-output">
+                                <small>Show between</small><span class="range-value"></span>
+                            </div>
+                        </div>
+                        <div class="price-limit">1500</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Main wrapper -->
+    <div class="shop-wrapper">
+
+        <!-- Search overlay -->
+        <div class="search-overlay"></div>
+
+        <!-- Search input -->
+        <div class="search-input-wrapper is-desktop is-hidden">
+            <div class="field">
+                <div class="control">
+                    <input id="nephos-search" type="text" name="search" placeholder="Search a Product">
+                    <span id="clear-search" role="button"><i data-feather="x"></i></span>
+                    <span class="bar"></span>
+                </div>
+                <span class="search-help">Type the name of the product you are looking for</span>
+            </div>
+        </div>
+        <!-- Main section -->
+        <div id="search-results" class="section">
+            <!-- Container -->
+            <div class="container">
+
+                <!-- House products -->
+                <div class="columns category-header">
+                    <div class="column main-column is-tablet-landscape-padded">
+                        <!-- Title -->
+                        <div class="category-title is-product-category">
+                            <h2>SEARCH RESULTS</h2>
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="listing-controls">
+                            <div class="search-count">
+                                <span>142 matching results</span>
+                            </div>
+                            <!-- Search -->
+                            <div class="search-field">
+                                <div class="control">
+                                    <input type="text" class="input is-rounded nephos-search-filter" placeholder="Filter results...">
+                                    <div class="search-icon">
+                                        <i data-feather="search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Controls -->
+
+                        <!-- Product grid -->
+                        <div class="columns is-search-grid is-multiline">
+                            <div class="column is-4">
+                                <div class="filter-card">
+                                    <h3 class="block-title">Categories</h3>
+                                    <!--Filter block-->
+                                    <div class="filter-block">
+                                        <div class="field">
+                                            <div class="control">
+                                                <label class="checkbox-wrap is-small">
+                                                    <input type="checkbox" class="d-checkbox" checked>
+                                                    <span></span>
+                                                    <span class="filter-label">House</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="filter-count">
+                                            <span>81</span>
+                                        </div>
+                                    </div>
+                                    <!--Filter block-->
+                                    <div class="filter-block">
+                                        <div class="field">
+                                            <div class="control">
+                                                <label class="checkbox-wrap is-small">
+                                                    <input type="checkbox" class="d-checkbox" checked>
+                                                    <span></span>
+                                                    <span class="filter-label">Office</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="filter-count">
+                                            <span>21</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="filter-card">
+                                    <h3 class="block-title">Types</h3>
+                                    <!--Filter block-->
+                                    <div class="filter-block">
+                                        <div class="field">
+                                            <div class="control">
+                                                <label class="checkbox-wrap is-small">
+                                                    <input type="checkbox" class="d-checkbox" checked>
+                                                    <span></span>
+                                                    <span class="filter-label">Couches</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="filter-count">
+                                            <span>64</span>
+                                        </div>
+                                    </div>
+                                    <!--Filter block-->
+                                    <div class="filter-block">
+                                        <div class="field">
+                                            <div class="control">
+                                                <label class="checkbox-wrap is-small">
+                                                    <input type="checkbox" class="d-checkbox" checked>
+                                                    <span></span>
+                                                    <span class="filter-label">Beds</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="filter-count">
+                                            <span>98</span>
+                                        </div>
+                                    </div>
+                                    <!--Filter block-->
+                                    <div class="filter-block">
+                                        <div class="field">
+                                            <div class="control">
+                                                <label class="checkbox-wrap is-small">
+                                                    <input type="checkbox" class="d-checkbox" checked>
+                                                    <span></span>
+                                                    <span class="filter-label">Seats</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="filter-count">
+                                            <span>17</span>
+                                        </div>
+                                    </div>
+                                    <!--Filter block-->
+                                    <div class="filter-block">
+                                        <div class="field">
+                                            <div class="control">
+                                                <label class="checkbox-wrap is-small">
+                                                    <input type="checkbox" class="d-checkbox" checked>
+                                                    <span></span>
+                                                    <span class="filter-label">Accessories</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="filter-count">
+                                            <span>9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="search-results-list" class="column is-8">
+                                <!-- Product -->
+                                <div class="flat-card is-auto cart-card search-card product-container" data-product-id="">
+                                    <ul class="cart-content">
+                                        <li>
+                                            <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/cosy-red-seat.png" alt="">
+                                            <span class="product-info">
+                                                    <span>Red Seat</span>
+                                            <span>House</span>
+                                            </span>
+                                            <span class="product-price">
+                                                    <span>Price</span>
+                                            <span>45.00</span>
+                                            </span>
+
+                                            <div data-trigger="spinner" class="main-cart-spinner">
+                                                <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner" data-rule="quantity" data-min="1" data-max="99">
+                                                <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                                    <i data-feather="minus"></i>
+                                                </a>
+                                                <span class="spinner-value">1</span>
+                                                <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                                                    <i data-feather="plus"></i>
+                                                </a>
+                                            </div>
+
+                                            <span class="action">
+                                                    <span class="action-link is-add has-simple-popover" data-content="Add to Cart"
+                                                        data-placement="top">
+                                                        <a href="#"><i class="feather-icons" data-feather="shopping-cart"></i></a>
+                                                    </span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="flat-card is-auto cart-card search-card product-container" data-product-id="">
+                                    <ul class="cart-content">
+                                        <li>
+                                            <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/blue-seat.png" alt="">
+                                            <span class="product-info">
+                                                    <span>The Gentleman</span>
+                                            <span>Office</span>
+                                            </span>
+                                            <span class="product-price">
+                                                    <span>Price</span>
+                                            <span>329.00</span>
+                                            </span>
+
+                                            <div data-trigger="spinner" class="main-cart-spinner">
+                                                <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner" data-rule="quantity" data-min="1" data-max="99">
+                                                <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                                    <i data-feather="minus"></i>
+                                                </a>
+                                                <span class="spinner-value">1</span>
+                                                <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                                                    <i data-feather="plus"></i>
+                                                </a>
+                                            </div>
+
+                                            <span class="action">
+                                                    <span class="action-link is-add has-simple-popover" data-content="Add to Cart"
+                                                        data-placement="top">
+                                                        <a href="#"><i class="feather-icons" data-feather="shopping-cart"></i></a>
+                                                    </span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="flat-card is-auto cart-card search-card product-container" data-product-id="">
+                                    <ul class="cart-content">
+                                        <li>
+                                            <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/dark-seat.jpg" alt="">
+                                            <span class="product-info">
+                                                    <span>The Gentleman</span>
+                                            <span>Office</span>
+                                            </span>
+                                            <span class="product-price">
+                                                    <span>Price</span>
+                                            <span>329.00</span>
+                                            </span>
+
+                                            <div data-trigger="spinner" class="main-cart-spinner">
+                                                <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner" data-rule="quantity" data-min="1" data-max="99">
+                                                <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                                    <i data-feather="minus"></i>
+                                                </a>
+                                                <span class="spinner-value">1</span>
+                                                <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                                                    <i data-feather="plus"></i>
+                                                </a>
+                                            </div>
+
+                                            <span class="action">
+                                                    <span class="action-link is-add has-simple-popover" data-content="Add to Cart"
+                                                        data-placement="top">
+                                                        <a href="#"><i class="feather-icons" data-feather="shopping-cart"></i></a>
+                                                    </span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="flat-card is-auto cart-card search-card product-container" data-product-id="">
+                                    <ul class="cart-content">
+                                        <li>
+                                            <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/office7.gif" alt="">
+                                            <span class="product-info">
+                                                    <span>The Gentleman</span>
+                                            <span>Office</span>
+                                            </span>
+                                            <span class="product-price">
+                                                    <span>Price</span>
+                                            <span>329.00</span>
+                                            </span>
+
+                                            <div data-trigger="spinner" class="main-cart-spinner">
+                                                <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner" data-rule="quantity" data-min="1" data-max="99">
+                                                <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                                    <i data-feather="minus"></i>
+                                                </a>
+                                                <span class="spinner-value">1</span>
+                                                <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                                                    <i data-feather="plus"></i>
+                                                </a>
+                                            </div>
+
+                                            <span class="action">
+                                                    <span class="action-link is-add has-simple-popover" data-content="Add to Cart"
+                                                        data-placement="top">
+                                                        <a href="#"><i class="feather-icons" data-feather="shopping-cart"></i></a>
+                                                    </span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Concatenated plugins -->
+    <script src="assets/js/app.js"></script>
+
+    <!--Data-->
+    <script src="assets/js/_data-wishlist.js"></script>
+    <script src="assets/js/_data-addresses.js"></script>
+    <script src="assets/js/_data-orders.js"></script>
+
+    <!-- TopShop  js -->
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/topshop.js"></script>
+    <script src="assets/js/authentication.js"></script>
+    <script src="assets/js/cart.js"></script>
+
+    <!--Pages-->
+    <script src="assets/js/account.js"></script>
+    <script src="assets/js/wishlist.js"></script>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/orders.js"></script>
+    <script src="assets/js/order.js"></script>
+    <script src="assets/js/checkout.js"></script>
+    <script src="assets/js/search.js"></script>
+</body>
+
+</html>
